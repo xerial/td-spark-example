@@ -1,0 +1,14 @@
+*~
+build
+.bundle
+vendor/bundle
+*.iml
+.idea
+atlassian-ide-plugin.xml
+target
+result
+log-test.properties
+.DS_Store
+.metals
+.bloop
+metals.sbt
