@@ -5,6 +5,8 @@ An example td-spark application.
 
 - Java8 is required as Spark 2.4.x does not support JDK11
 
+td-spark documentation: https://treasure-data.github.io/td-spark/
+
 ## Project Structure
 
 ```
