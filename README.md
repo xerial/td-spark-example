@@ -18,12 +18,13 @@ build.sbt  # Build definition
 ## Usage
 
 ```
-$ export TD_API_KEY=(Your TD API Key)
+# Set your TD API key as an environment variable
+$ export TD_API_KEY=(Your TD API key)
+
 $ ./sbt
 
 # Run the example program
 sbt:td-spark-example> run
-[info] Compiling 1 Scala source to /Users/leo/work/td/2020-04-15-mw/td-spark-example/target/scala-2.11/classes ...
 [info] running example.TDSparkExample
 Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
 20/04/15 18:00:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
@@ -69,13 +70,12 @@ and size > 50 and size < 100
 
 ## Create a standalone Spark application
 
-
 ```
 # Create a portable executable package into target/pack folder
 $ ./sbt pack
 
 
-# target/pack/bin folder contains a script to launch a local Spark cluster.
+# target/pack/bin folder contains a script to launch a local Spark cluster and your application:
 $ ./target/pack/bin/td-spark-example
-...TDSparkExample
+...
 ```
