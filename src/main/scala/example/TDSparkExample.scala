@@ -46,18 +46,18 @@ object TDSparkExample extends LogSupport {
     import com.treasuredata.spark._
     val td = spark.td
 
-    // A) Reading a TD table as Spark DataFrame
+    // A) Reading a TD table as a Spark DataFrame
     info(s"Reading a TD Table")
     val df = td.table("sample_datasets.www_access")
             .withinUnixTimeRange(from = 1412320845, until = 1412321000) // Selecting a time range
-            .df
+            .df                                                         // Read TD Table as a DataFrame
             .select("time", "host", "path", "code", "size") // Selecting columns to read
-            .filter("size > 50 and size < 100") // Apply additional filters
+            .filter("size > 50 and size < 100")           // Apply additional filters
 
     // Display the DataFrame contents
     df.show()
 
-    // See https://spark.apache.org/docs/latest/sql-programming-guide.html for DataFrame usage
+    // See https://spark.apache.org/docs/latest/sql-programming-guide.html for general DataFrame usage
 
     info(s"Submitting a Presto query and reading the result")
     // B) Making Presto queries (using presto-jdbc internally)
