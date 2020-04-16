@@ -3,6 +3,8 @@ td-spark-example
 
 An example td-spark application.
 
+- Java8 is required as Spark 2.4.x does not support JDK11
+
 ## Project Structure
 
 ```
@@ -71,6 +73,7 @@ and size > 50 and size < 100
 $ ./sbt pack
 
 
-# target/pack/bin folder contains a script to launch a local Spark cluster
+# target/pack/bin folder contains a script to launch a local Spark cluster.
 $ ./target/pack/bin/td-spark-example
+...TDSparkExample
 ```
